@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+    #Back
+  api:
+    build: .
+    container_name: bolota-api
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./medication.db:/app/medication.db
+      - ./dados_produtos.csv:/app/dados_produtos.csv
+      - /app/node_modules
+    env_file:
+      - .env
+    networks:
+      - bolota-network
+
+      #Front
+  web:
+    build: 
+      context: ./bolota-web
+      dockerfile: Dockerfile
+    container_name: bolota-web
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:3000
+    depends_on:
+      - api
+    networks:
+      - bolota-network
+
+networks:
+  bolota-network:
+    driver: bridge

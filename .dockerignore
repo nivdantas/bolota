@@ -1,0 +1,6 @@
+node_modules
+dist
+.git
+.env
+medication.db
+bolota-web/node_modules
