@@ -1,3 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+	--color-greenbolota-50: #beebce;
+	--color-greenbolota-100: #86d9a4;
+	--color-greenbolota-200: #4ec77b;
+	--color-greenbolota-300: #3bba69;
+	--color-greenbolota-400: #35a85f;
+	--color-greenbolota-500: #2f9554;
+	--color-greenbolota-600: #29824a;
+	--color-greenbolota-700: #216a3c;
+	--color-greenbolota-800: #1b5731;
+	--color-greenbolota-900: #123820;
+}
