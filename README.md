@@ -1,33 +1,34 @@
 
-# Bolota AI  – Assistente Veterinário
+# Bolota AI – Veterinary Assistant
 
-Assistente de atendimento para pet shop/farmácia veterinária que usa IA (Gemini) para:
+Customer service assistant for pet shops/veterinary pharmacies that uses AI (Gemini) to:
 
-- Consultar preço, estoque e artigos de medicamentos a partir de um banco local (SQLite).
-- Responder em linguagem natural via uma interface de chat web.
+- Check prices, stock, and medication items from a local database (SQLite).
+- Respond in natural language via a web chat interface.
 
-O projeto é composto por:
+The project consists of:
 
-- **Backend Node.js + TypeScript** com Express, SQLite e integração com Gemini.
-- **Frontend Simples para demonstração, utilizando React + Vite + TypeScript + Tailwind CSS** (pasta `bolota-web`).
-- **Docker Compose** para compor o projeto.
+- **Node.js + TypeScript backend** with Express, SQLite, and Gemini integration.
+- **Simple frontend for demonstration, using React + Vite + TypeScript + Tailwind CSS** (`bolota-web` folder).
+- **Docker Compose** to compose the project.
 
 ---
 
-## Requisitos
+## Requirements
 
 - Docker.
 - Node.js 20+.
-- Chave de API do Gemini (Google AI Studio).
+- Gemini API key (Google AI Studio).
 
 ---
 
-## Variáveis de ambiente
+## Environment variables
 
-Crie um arquivo `.env` na **raiz do backend** com:
-GEMINI_API_KEY=chave
+Create a `.env` file in the **backend root** with:
+GEMINI_API_KEY=key
 
 
-## Executar com o comando:
+## Run with the command:
 docker-compose up –build
 
+Translated with DeepL.com (free version)
