@@ -30,5 +30,3 @@ GEMINI_API_KEY=key
 
 ## Run with the command:
 docker-compose up –build
-
-Translated with DeepL.com (free version)
