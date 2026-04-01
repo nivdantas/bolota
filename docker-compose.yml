@@ -1,14 +1,14 @@
 version: '3.8'
 
 services:
-    #Back
+  # Back
   api:
     build: .
     container_name: bolota-api
     ports:
       - "3000:3000"
     volumes:
-      - ./medication.db:/app/medication.db
+      - ./data:/app/data 
       - ./dados_produtos.csv:/app/dados_produtos.csv
       - /app/node_modules
     env_file:
@@ -16,7 +16,7 @@ services:
     networks:
       - bolota-network
 
-      #Front
+  # Front
   web:
     build: 
       context: ./bolota-web

@@ -1,5 +1,6 @@
 import Database from "better-sqlite3";
 import fs from "fs";
+import path from "path";
 import csv from "csv-parser";
 
 interface DataMedicine {
@@ -7,8 +8,14 @@ interface DataMedicine {
   price: number;
   stock: number;
 }
+const dbDir = path.resolve(process.cwd(), "data");
+const dbPath = path.join(dbDir, "medication.db");
 
-const db = new Database("medication.db", { verbose: console.log });
+if (!fs.existsSync(dbDir)) {
+  fs.mkdirSync(dbDir, { recursive: true });
+}
+
+const db = new Database(dbPath, { verbose: console.log });
 
 db.pragma("journal_mode = WAL");
 
